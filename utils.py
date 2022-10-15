@@ -1,6 +1,6 @@
 import pandas as pd
 import requests
-
+import os
 
 class APIBMEHandler:
 
@@ -11,6 +11,8 @@ class APIBMEHandler:
 
         self.competi = 'mia_9'
         self.user_key = 'AIzaSyCTPOYItA-K2cuoXxLcmAwuWXSSsNSpDHc'
+        self.user_key = os.environ['MIAX_API_KEY'] #luego se inicializa desde el terminal
+        #MIAX_API_KEY='valor'
 
     def get_ticker_master(self, market):
         url = f'{self.url_base}/data/ticker_master'
