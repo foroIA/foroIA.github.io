@@ -3,7 +3,8 @@ google.charts.setOnLoadCallback(drawTable);
 
 function drawTable() {
   const query = new google.visualization.Query(
-    'https://docs.google.com/spreadsheets/d/e/2PACX-1vTod6BGiBA--DmvY8tktdr1FvG_NE6mEXdJDvUWGdqH8pkA_YqFa-Jy2BCmpj3DkCnjlxJ0lL_L9moT/pubhtml'
+  'https://docs.google.com/spreadsheets/d/1jUp2GF0G5-COu067ylz8MF3qa2FEF4Xn1s2wXE33kNo/gviz/tq?sheet=Sheet1'
+    
   );
 
   query.send(function(response) {
