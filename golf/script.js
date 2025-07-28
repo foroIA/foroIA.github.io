@@ -5,7 +5,7 @@ google.charts.setOnLoadCallback(drawTable);
 
 function drawTable() {
   const query = new google.visualization.Query(
-    'https://docs.google.com/spreadsheets/d/2PACX-1vTod6BGiBA--DmvY8tktdr1FvG_NE6mEXdJDvUWGdqH8pkA_YqFa-Jy2BCmpj3DkCnjlxJ0lL_L9moT/gviz/tq?sheet=Sheet1'
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vTod6BGiBA--DmvY8tktdr1FvG_NE6mEXdJDvUWGdqH8pkA_YqFa-Jy2BCmpj3DkCnjlxJ0lL_L9moT/pubhtml'
   );
 
   query.send(function(response) {
