@@ -1,15 +1,15 @@
-const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_cJUSUcwjb80qq-gnGjDX-u0ernEB5GNjDhKF5RyHvmL23m7DB7g0-IenizMSORKHwDt0fxj8DUnM/pubhtml';
+async function fetchScores() {
+  const response = await fetch('ScoreBoard.xlsx'); // The Excel file in the same folder
+  const arrayBuffer = await response.arrayBuffer();
+  const workbook = XLSX.read(arrayBuffer, { type: 'array' });
 
-function fetchScores() {
-  Tabletop.init({
-    key: publicSpreadsheetUrl,
-    callback: showScores,
-    simpleSheet: true
-  });
+  const firstSheet = workbook.SheetNames[0];
+  const data = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheet]);
+
+  showScores(data);
 }
 
 function showScores(data) {
-  // Calculate rank by total score
   data.forEach(d => d.Total = parseFloat(d.Total || 0));
   const sorted = [...data].sort((a, b) => a.Total - b.Total);
   sorted.forEach((row, i) => row.Rank = i + 1);
