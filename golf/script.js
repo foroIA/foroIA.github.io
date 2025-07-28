@@ -1,4 +1,4 @@
-const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_cJUSUcwjb80qq-gnGjDX-u0ernEB5GNjDhKF5RyHvmL23m7DB7g0-IenizMSORKHwDt0fxj8DUnM/pubhtml';
+const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTod6BGiBA--DmvY8tktdr1FvG_NE6mEXdJDvUWGdqH8pkA_YqFa-Jy2BCmpj3DkCnjlxJ0lL_L9moT/pubhtml';
 
 function fetchScores() {
   Tabletop.init({
