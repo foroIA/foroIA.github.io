@@ -1,5 +1,5 @@
 async function fetchScores() {
-  const response = await fetch('ScoreBoard.xlsx'); // The Excel file in the same folder
+  const response = await fetch('ScoreBoard25.xlsx'); // The Excel file in the same folder
   const arrayBuffer = await response.arrayBuffer();
   const workbook = XLSX.read(arrayBuffer, { type: 'array' });
 
