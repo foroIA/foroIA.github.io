@@ -1,46 +1,48 @@
 body {
+  background-color: #d0f0c0; /* light green */
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
   margin: 0;
   padding: 20px;
+  text-align: center;
 }
 
 .container {
   max-width: 1000px;
-  margin: auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 auto;
 }
 
-h1 {
-  text-align: center;
+.main-title {
+  color: red;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: black;
+  font-size: 1.5em;
+  margin-top: 5px;
   margin-bottom: 20px;
 }
 
-#scoreboard table {
-  width: 100%;
+#scoreboard {
+  margin-top: 20px;
+}
+
+/* Optional: Style Google Chart table a bit */
+.google-visualization-table-table {
+  margin: 0 auto;
+  border: 1px solid #333;
   border-collapse: collapse;
+  width: 90%;
 }
 
-#scoreboard th, #scoreboard td {
-  border: 1px solid #ccc;
-  padding: 6px;
-  text-align: center;
-  font-size: 14px;
-}
-
-#scoreboard th {
-  background: #222;
-  color: white;
-}
-
-.edit-link {
-  display: block;
-  text-align: center;
-  margin-top: 15px;
-  text-decoration: none;
+.google-visualization-table-th {
+  background-color: #e0e0e0;
   font-weight: bold;
-  color: #0066cc;
+  padding: 8px;
+}
+
+.google-visualization-table-td {
+  padding: 8px;
 }
